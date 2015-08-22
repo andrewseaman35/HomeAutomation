@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.seaman.andrew.homeautomation.RemoveElementsActivity">
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/removeRoomSpinner"
+        android:layout_below="@+id/removeRoomText"
+        android:layout_centerInParent="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/removeApplianceSpinner"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/selectRoomText"
+        android:id="@+id/removeRoomText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/selectApplianceText"
+        android:id="@+id/removeApplianceText"
+        android:layout_above="@+id/removeApplianceSpinner"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/removeRoomButtonText"
+        android:id="@+id/removeRoomButton"
+        android:layout_below="@+id/removeRoomSpinner"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/removeApplianceButtonText"
+        android:id="@+id/removeApplianceButton"
+        android:layout_below="@+id/removeApplianceSpinner"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

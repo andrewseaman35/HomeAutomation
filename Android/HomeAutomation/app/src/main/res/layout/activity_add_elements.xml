@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.seaman.andrew.homeautomation.AddElementsActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/addRoomText"
+        android:text="@string/addRoomText"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/addApplianceText"
+        android:id="@+id/addApplianceText"
+        android:layout_below="@+id/addRoomButton"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addRoomInputText"
+        android:hint="@string/addRoomInputHint"
+        android:inputType="textCapWords"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/addRoomText"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addRoomButton"
+        android:id="@+id/addRoomButton"
+        android:layout_below="@+id/addRoomInputText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addApplianceInputText"
+        android:maxLength="25"
+        android:hint="@string/addApplianceInputHint"
+        android:inputType="textCapWords"
+        android:layout_below="@+id/addApplianceSpinner"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addApplianceButton"
+        android:id="@+id/addApplianceButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/addRoomButton"
+        android:layout_marginBottom="58dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addApplianceSpinner"
+        android:layout_below="@+id/addApplianceText"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/applianceTypeSpinner"
+        android:layout_below="@id/addApplianceInputText"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/appliance_types"/>
+
+</RelativeLayout>

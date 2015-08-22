@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Home Automation</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Home Automation</string>
+
+    <string name="roomsButtonText">Rooms</string>
+    <string name="addElementsButtonText">Add Element</string>
+    <string name="removeElementsButtonText">Remove Element</string>
+    <string name="selectRoomText">Select Room</string>
+    <string name="selectApplianceText">Select Appliance</string>
+    <string name="removeRoomButtonText">Remove Room</string>
+    <string name="removeApplianceButtonText">Remove Appliance</string>
+    <string name="addRoomText">Add Room</string>
+    <string name="addApplianceText">Add Appliance</string>
+    <string name="addRoomInputHint">Room Name</string>
+    <string name="addRoomButton">Add Room</string>
+    <string name="addApplianceInputHint">Appliance Name</string>
+    <string name="addApplianceButton">Add Appliance</string>
+
+    <string name="usernameText">Username</string>
+    <string name="passwordText">Password</string>
+    <string name="loginButtonText">Log in</string>
+    <string name="title_activity_loading">LoadingActivity</string>
+    <string name="title_activity_room">RoomActivity</string>
+    <string name="title_activity_add_elements">AddElementsActivity</string>
+    <string name="title_activity_select_appliance">SelectApplianceActivity</string>
+
+    <string name="title_activity_remove_elements">RemoveElementsActivity</string>
+
+    <string name="onOffLabel">On/Off</string>
+
+    <string-array name="appliance_types">
+        <item>Toggle</item>
+    </string-array>
+
+</resources>

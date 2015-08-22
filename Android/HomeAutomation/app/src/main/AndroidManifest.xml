@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seaman.andrew.homeautomation" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SelectRoomActivity"
+            android:label="@string/title_activity_room"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".AddElementsActivity"
+            android:label="@string/title_activity_add_elements"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SelectApplianceActivity"
+            android:label="@string/title_activity_select_appliance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".RemoveElementsActivity"
+            android:label="@string/title_activity_remove_elements"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name=".ConnectionService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.seaman.andrew.homeautomation.connectionService"/>
+                <action android:name="com.seaman.andrew.homeautomation.Main"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
