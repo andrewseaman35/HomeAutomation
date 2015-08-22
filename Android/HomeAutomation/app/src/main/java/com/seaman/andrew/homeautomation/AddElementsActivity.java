@@ -21,6 +21,25 @@ import java.io.IOException;
 import java.nio.Buffer;
 import java.util.ArrayList;
 
+/*
+ * File: AddElementsActivity.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains the activity used to add elements
+ *  to the file structure. It uses r/layout/activity_add_elements.xml.
+ *
+ * Current Progress (incomplete)
+ * - Rooms and appliances can be added
+ *   - Performs required checks before adding
+ *   - Refreshes on adds
+ * - Activity is logged
+ * - Appliance IDs have been implemented
+ *
+ * TODO: make everything in terms of Appliance class
+ * TODO: use I/O thread to create items in file structure
+ */
 
 public class AddElementsActivity extends Activity {
     private final int intTAKEN = 1;

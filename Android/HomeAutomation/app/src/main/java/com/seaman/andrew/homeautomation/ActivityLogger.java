@@ -10,11 +10,20 @@ import java.util.Date;
 
 import android.os.Environment;
 
-/**
- * Class used to log activity of application
- * Created by Andrew on 6/30/2015.
+/*
+ * File: ActivityLogger.java
  * Project: Home Automation
- * Version 1.0
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains the ActivityLogger class. Thie purpose of this
+ *   class is to provide an easy way to log application activity to a log file. An
+ *   object of this class must be included in any activity that requires logging.
+ *
+ * Current Progress (complete)
+ * - Log file is created if necessary
+ * - Method implemented to write to file
+ *   - I/O thread created and implemented
  */
 public class ActivityLogger {
     File logFile;

@@ -20,6 +20,17 @@ import java.net.Socket;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
+/*
+ * File: ConnectionService.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains the service that supplies the WiFi connection
+ *  to the ESP_server.
+ *
+ */
+
 public class ConnectionService extends Service {
     // to log activity to log.file
     private ActivityLogger log = new ActivityLogger();
