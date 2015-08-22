@@ -1,3 +1,19 @@
+/*
+ * File: getMessage.ino
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ * 
+ * Description: This file contains the method to parse an array of
+ *  characters into a Msg, It checks the length of the array as well
+ *  as the MAC address of the sender.
+ *  
+ * Current Progress (completed)
+ * - Message length checked
+ * - Sender MAC checked
+ * - Msg parsed
+ */
+
 Msg getMessageFromChars(char data[]) {
   Msg msg;
 

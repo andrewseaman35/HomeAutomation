@@ -1,3 +1,27 @@
+/*
+ * File: ESP_Server.ino
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ * 
+ * Description: This file contains the main part of the Arduino-run server.
+ *  It will run on the boot of the Arduino and will start the server for the
+ *  individual WiFi hub. In addition, it will open and check the Bluetooth
+ *  connections to the inidividual relay systems controlled by the ATTinies
+ *  over the HC-05. This server will accept messages from the Android
+ *  application via the Msg message format over a TCP connection. The MAC
+ *  address of the device is checked and if valid, the message is parsed.
+ *  A simplified form of the message will then be sent over Bluetooth to the
+ *  according Bluetooth-relay system.
+ *  
+ * Current Progress (incomplete)
+ * - ESP is set up
+ *   - ESP checked
+ *   - Server begun on specified port
+ * - Loop allows TCP client to connect
+ * - Msg parsed from received bytes
+ */
+
 #include <Msg.h>
 
 #include <SoftwareSerial.h>
