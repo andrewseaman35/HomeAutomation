@@ -2,13 +2,21 @@ package com.seaman.andrew.homeautomation;
 
 import java.math.BigInteger;
 import java.util.BitSet;
-/**
- * Class to use as protocol for messages sent between
- *  Android application and Arduino server
- * Created by Andrew on 6/26/2015.
+/*
+ * File: Msg.java
  * Project: Home Automation
- * Version 1.0
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains the Msg class. This class is used to
+ *  contain all of the required data for a complete message to be sent
+ *  to the WiFi hub via protocol.
+ *
+ * Current Progress (complete)
+ * - create container
+ * - toSendString to allow easy sending to ConnectionService
  */
+
 public class Msg {
     String sndrMac;
     char rcvrID;

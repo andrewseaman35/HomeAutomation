@@ -12,6 +12,23 @@ import android.widget.Toast;
 import android.content.Intent;
 import android.widget.TextView;
 
+/*
+ * File: LoginActivity.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains the LoginActivity class. It is the initial activity to run
+ *  upon application start up. It requires the user to input a username and password in order
+ *  to continue to the main activity.
+ *
+ * Current Progress (incomplete)
+ * - UI set up
+ *
+ * TODO: implement secure login system
+ * TODO: perform all required checks (WiFi connection, etc) during log in
+ */
+
 public class LoginActivity extends Activity {
 
     // used to send username to main activity via intent

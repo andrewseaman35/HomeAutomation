@@ -23,6 +23,28 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/*
+ * File: SelectApplianceActivity.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains the activity to select an appliance to alter
+ *  the state of. The listed appliances are dependent on the room that is selected
+ *  in SelectRoomActivity
+ *
+ *  At this point, all of the appliances are "toggle" appliances, so all the list
+ *  items only have an on/off switch. In the future, other types of appliances will
+ *  be added and there will have to be additional list item types.
+ *
+ * Current Progress (incomplete)
+ *  - Display items as proper views
+ *  - Send message on toggle
+ *
+ *  TODO: send proper message
+ *  TODO: await response after message is sent
+ *
+ */
 
 public class SelectApplianceActivity extends Activity {
 

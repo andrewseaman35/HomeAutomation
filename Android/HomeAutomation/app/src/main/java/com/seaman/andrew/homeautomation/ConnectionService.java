@@ -27,7 +27,24 @@ import java.util.concurrent.LinkedBlockingQueue;
  * Date Modified: August 21, 2015
  *
  * Description: This file contains the service that supplies the WiFi connection
- *  to the ESP_server.
+ *  to the ESP_server. This service will only be started once per app session, right
+ *  after log in. On connect, it will send a "hello" signal to each of the
+ *  WiFi hubs. On receipt, the hubs will ping each of the relay hubs in order to
+ *  check their connectivity status. The service has a dedicated network thread, in
+ *  order to separate network activity from the main thread.
+ *
+ *  On receiving a broadcast, the service will append the message to the blocking queue
+ *  that is accessed by the network thread. The service will also handle notifications
+ *  regarding the status of the network connection and the WiFi hubs.
+ *
+ *  Current Progress (incomplete):
+ *  - WiFi connection in place
+ *  - Network thread created and implemented
+ *  - Blocking queue created and implemented
+ *  - Broadcast receiver in place
+ *
+ *  TODO: notification manager
+ *  TODO: receiving messages from WiFi hub and relaying back to activities
  *
  */
 
@@ -67,7 +84,7 @@ public class ConnectionService extends Service {
         filter = new IntentFilter("seaman.andrew.homeautomation.MESSAGE");
 
         // checking server connection and network thread
-        blockingQueue.add("Hello, server!");
+        blockingQueue.add("Hello server!");
     }
 
     @Override

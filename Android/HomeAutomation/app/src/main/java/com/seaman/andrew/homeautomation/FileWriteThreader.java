@@ -5,9 +5,21 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- * Created by Andrew on 7/31/2015.
+/*
+ * File: FileWriteThreader.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains a threader class to allow file writes to be
+ *  performed outside of the main thread.
+ *
+ * Current Progress (incomplete)
+ * - Allows single instance writing to a single file
+ *
+ * TODO: implement writing while looping through array or similar data structure
  */
+
 public class FileWriteThreader {
     public void write(String nText, File nFile, boolean nAppend) {
         class Writer implements Runnable {

@@ -26,6 +26,21 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+/*
+ * File: RemoveElementsActivity.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains the activity to remove elements from the
+ *  file system. It allows the user to remove entire rooms, or individual
+ *  appliances in the room.
+ *
+ * Current Progress (incomplete)
+ *  - Remove room added
+ *  - Remove appliance added
+ *
+ */
 
 public class RemoveElementsActivity extends Activity {
     private final int NEW_LINE = 10;

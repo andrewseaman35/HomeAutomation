@@ -14,8 +14,21 @@ import android.widget.ToggleButton;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * Created by Andrew on 7/15/2015.
+/*
+ * File: ToggleListAdapter.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains list adapter for the "toggle" appliances in
+ *  SelectApplianceActivity.
+ *
+ * Current Progress (complete)
+ *  - Display appliance and toggle
+ *  - Send message on toggle
+ *
+ *  TODO: send proper message
+ *
  */
 public class ToggleListAdapter<T> extends BaseAdapter {
     Context context;
@@ -86,7 +99,7 @@ public class ToggleListAdapter<T> extends BaseAdapter {
 
                 Msg message = new Msg(Main.MAC_ADDRESS,
                         (char)appls.get(holder.position).id,
-                        appls.get(holder.position).getTypeChar(),
+                        appls.get(holder.position).type.charAt(0),
                         'a', // finalState
                         'e'); // error flags
 

@@ -14,6 +14,20 @@ import android.widget.Toast;
 import java.io.File;
 import java.util.ArrayList;
 
+/*
+ * File: SelectRoomActivity.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains the activity to select a room to view the appliances
+ *  of.
+ *
+ * Current Progress (complete)
+ *  - Display items as proper views
+ *  - View appliances of selected room through SelectApplianceActivity
+ *
+ */
 
 public class SelectRoomActivity extends Activity {
     public final static String ROOM = "com.seaman.andrew.homeautomation.SelectApplianceActivity.ROOM";

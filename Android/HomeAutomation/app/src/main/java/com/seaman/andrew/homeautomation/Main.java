@@ -17,7 +17,17 @@ import android.content.Intent;
 
 import java.io.File;
 
-
+/*
+ * File: Main.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains the main menu for the application. It is
+ *  viewed directly after logging in and allows the user to navigate to the
+ *  desired activity.
+ *
+ */
 
 public class Main extends Activity {
     // Used to log to log.file
@@ -84,7 +94,7 @@ public class Main extends Activity {
                 // get message from editText field
                 String text = msgField.getText().toString();
 
-                Msg message = new Msg(MAC_ADDRESS, 'e', 'j', 'o', 'x');
+                Msg message = new Msg(MAC_ADDRESS, 'e', 't', '1', 'x');
 
                 System.out.println("MAC: " + MAC_ADDRESS);
 

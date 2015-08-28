@@ -4,8 +4,14 @@ import android.os.Environment;
 
 import java.io.File;
 
-/**
- * Created by Andrew on 6/30/2015.
+/*
+ * File: Constants.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains constant values that are used throughout the application
+ *
  */
 public class Constants {
     // Constant Values

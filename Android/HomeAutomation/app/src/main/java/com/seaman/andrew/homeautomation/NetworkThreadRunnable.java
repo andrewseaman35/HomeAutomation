@@ -10,9 +10,29 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.util.concurrent.BlockingQueue;
 
-/**
- * Created by Andrew on 7/21/2015.
+/*
+ * File: NetworkThreadRunnable.java
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ *
+ * Description: This file contains the runnable for the network thread that
+ *  is opened in ConnectionService. This thread access the blocking queue
+ *  from ConnectionService and is blocked until the queue is populated.
+ *  Once populated, it opens a TCP connection to the server and sends the
+ *  message.
+ *
+ * Current Progress (incomplete)
+ *  - BlockingQueue implemented
+ *  - Connection created
+ *  - Message sent
+ *
+ *  TODO: error handling
+ *  TODO: handle failed connection to server
+ *
  */
+
+
 public class NetworkThreadRunnable implements Runnable{
     // socket for server connection
     private Socket socket;
