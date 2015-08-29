@@ -31,8 +31,8 @@
 #define ESP_txPin 5 // Connects to RX on ESP8266
 
 //NETWORK CONSTANTS
-const char SSID_ESP[] = "ATT564";
-const char SSID_KEY[] = "4182103725";
+const char SSID_NAME[] = "ATT564";
+const char SSID_PASS[] = "4182103725";
 const char SERVER_MODE = '1'; //1=Open, 2=Close
 const char SERVER_PORT[] = "36330";
 
@@ -42,35 +42,17 @@ const char CIPMUX = '1'; //CIPMUX 0=Single Connection, 1=Multiple Connections
 
 SoftwareSerial ESP(ESP_rxPin, ESP_txPin); // RX, TX on Arduino
 
-//DEFINE ALL FUNCTIONS HERE
-boolean setup_ESP();
-boolean read_until_ESP(const char keyword1[], int key_size, int timeout_val, byte mode);
-void timeout_start();
-boolean timeout_check(int timeout_ms);
-void serial_dump_ESP();
+// FUNCTIONS
+boolean findResponse(char, int);
+boolean setupESP();
+void dumpESP();
 boolean connect_ESP();
 Msg getMessageFromChars(char data[]);
 boolean macIsKnown(char data[]);
 
 //DEFINE ALL GLOBAL VARIABLES HERE
-unsigned long timeout_start_val;
-char scratch_data_from_ESP[20];//first byte is the length of bytes
-char payload[150];
-byte payload_size=0, counter=0;
 char ip_address[16];
 char dataIn[100];
-
-//DEFINE KEYWORDS HERE
-const char keyword_OK[] = "OK";
-const char keyword_Ready[] = "Ready";
-const char keyword_no_change[] = "no change";
-const char keyword_blank[] = "#&";
-const char keyword_ip[] = "192.";
-const char keyword_rn[] = "\r\n";
-const char keyword_quote[] = "\"";
-const char keyword_carrot[] = ">";
-const char keyword_sendok[] = "SEND OK";
-const char keyword_linkdisc[] = "Unlink";
 
 //DEFINE EEPROM INDICES HERE
 const int EEPROM_DEVICE_ID = 0;
@@ -96,10 +78,12 @@ void setup(){
   Serial.println();
 
   // Keep trying to perform set up
-  while(setup_ESP() == false)
+  while(setupESP() == false)
   {}
 
-  serial_dump_ESP();
+  dumpESP();
+
+  Serial.println("\nServer Started");
 }
 
 void loop(){
