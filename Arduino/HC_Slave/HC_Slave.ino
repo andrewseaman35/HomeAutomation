@@ -1,3 +1,26 @@
+/*
+ * File: HC_SLAVE.ino
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 30, 2015
+ * 
+ * Description: This file contains the code that will be run on the ATTinies using 
+ *  HC-06 to act as a Bluetooth slave. It's job is to receive incoming messages from
+ *  the HC_Master and react as required. The first implementation will only allow for
+ *  toggle appliances, and it will toggle a relay as necessary. It will also be able to 
+ *  send the status of the appliace back to the HC_Master.
+ *  
+ * Current Progress (incomplete)
+ * - Usable with ATTiny
+ * - HC set up
+ *   - notifications via errorPin
+ *
+ * TODO: 
+ *  - Receive proper data
+ *  - trigger relay
+ *  - implement status check and send
+ */
+
 #include <SoftwareSerial.h>
 
 #define relayIn 1

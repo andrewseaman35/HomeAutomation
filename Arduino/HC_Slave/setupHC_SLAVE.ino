@@ -1,3 +1,19 @@
+/*
+ * File: setupHC_SLAVE.ino
+ * Project: Home Automation
+ * Author: Andrew Seaman
+ * Date Modified: August 21, 2015
+ * 
+ * Description: This file contains the method to set up the HC-06 module via AT commands.
+ *  The HC module is checked and then the name is set. The LED blinks twice when the setup
+ *  is started, and quickly flashes off when a set up command is successful.
+ *  
+ * Current Progress (complete)
+ * - Check HC
+ * - Set name
+ *
+ */
+
 boolean setupHC_SLAVE() {
   // initial HC_SLAVE check
   HC_SLAVE.print("AT");
